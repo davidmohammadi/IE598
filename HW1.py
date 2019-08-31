@@ -72,7 +72,7 @@ for i in [0, 1, 2]:
     plt.sca(axes[i])
     plt.scatter(X_train[:, 0], X_train[:, 1], c=y_train, cmap=plt.cm.prism)
     ys = (-clf.intercept_[i] - Xs * clf.coef_[i, 0]) / clf.coef_[i, 1]
-   # plt.plot(Xs, ys, hold=True)
+    plt.plot(Xs, ys)
     
 print( clf.predict(scaler.transform([[4.7, 3.1]])) )
 #[0]
